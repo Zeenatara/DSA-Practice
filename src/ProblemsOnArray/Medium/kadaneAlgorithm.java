@@ -7,9 +7,9 @@ public class kadaneAlgorithm {
     public static int maxSubArray(int[] nums) {
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
+        for (int num : nums) {
+            currSum += num;
 
-        for (int i = 0; i < nums.length; i++) {
-            currSum += nums[i];
 
             if (currSum > maxSum) {
                 maxSum = currSum;
